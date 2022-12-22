@@ -4,6 +4,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
 import Footer from "./Footer";
+import WeatherData from "./WeatherData";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.city);
@@ -11,11 +12,13 @@ export default function Weather(props) {
   const [update, setUpdate] = useState(false);
 
   console.log(update);
-  console.log(weather);
 
   function displayWeather(response) {
     setWeather({
+      city: response.data.name,
       temperature: response.data.main.temp,
+      pressure: response.data.main.pressure,
+      country: response.data.sys.country,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
@@ -38,7 +41,6 @@ export default function Weather(props) {
   }
 
   function updateCity(event) {
-    event.preventDefault();
     setCity(event.target.value);
   }
 
@@ -51,6 +53,7 @@ export default function Weather(props) {
             placeholder="Type a city"
             autocomplete="off"
             className="form-control"
+            onChange={updateCity}
           />
         </div>
         <div className="col-sm-3 m-1">
@@ -58,7 +61,6 @@ export default function Weather(props) {
             type="submit"
             value="Search"
             className="btn btn-secondary w-100"
-            onChange={updateCity}
           />
         </div>
         <div className="col-sm-2 m-1">
@@ -72,6 +74,7 @@ export default function Weather(props) {
     <div>
       <div className="container">
         <div className="searchForm">{searchForm}</div>
+        <WeatherData data={weather} />
       </div>
       <Footer />
     </div>
