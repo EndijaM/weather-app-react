@@ -7,12 +7,12 @@ export default function Temperature(props) {
 
   function showCelsius(event) {
     event.preventDefault();
-    setTemperature(props.temperature);
+    setTemperature(props.value);
   }
 
   function showFahrenheit(event) {
     event.preventDefault();
-    setTemperature((props.temperature * 9) / 5 + 32);
+    setTemperature(Math.round((props.value * 9) / 5 + 32));
   }
 
   return (

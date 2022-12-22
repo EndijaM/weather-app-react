@@ -8,7 +8,7 @@ export default function Footer() {
       <p>
         This is an{" "}
         <a
-          href="https://github.com/EndijaM/react-weather-app"
+          href="https://github.com/EndijaM/weather-app-react"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -16,7 +16,7 @@ export default function Footer() {
         </a>
         , hosted on
         <a
-          href="https://benevolent-entremet-723e8f.netlify.app/"
+          href="https://radiant-manatee-22459f.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
         >
