@@ -1,0 +1,14 @@
+.Footer {
+  margin-top: 10px;
+}
+.Footer p {
+  color: black;
+  opacity: 0.9;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.7;
+}
+.Footer a {
+  color: black;
+  opacity: 0.9;
+}
