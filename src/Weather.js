@@ -27,8 +27,7 @@ export default function Weather(props) {
     setUpdate(true);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function citySearch() {
     let apiKey = "99b8f9330a1bfba3a85e523fd3c2e528";
     let units = "metric";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -38,6 +37,11 @@ export default function Weather(props) {
     } else {
       alert(`Please type a city!`);
     }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    citySearch();
   }
 
   function updateCity(event) {
@@ -70,13 +74,17 @@ export default function Weather(props) {
     </form>
   );
 
-  return (
-    <div>
-      <div className="container">
-        <div className="searchForm">{searchForm}</div>
-        <WeatherData data={weather} />
+  if (update) {
+    return (
+      <div>
+        <div className="container">
+          <div className="searchForm">{searchForm}</div>
+          <WeatherData data={weather} />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  } else {
+    return citySearch();
+  }
 }
