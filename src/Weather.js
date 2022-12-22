@@ -11,8 +11,6 @@ export default function Weather(props) {
   const [weather, setWeather] = useState("");
   const [update, setUpdate] = useState(false);
 
-  console.log(update);
-
   function displayWeather(response) {
     setWeather({
       city: response.data.name,
@@ -32,11 +30,7 @@ export default function Weather(props) {
     let units = "metric";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
-    if (city.length > 0) {
-      axios.get(url).then(displayWeather);
-    } else {
-      alert(`Please type a city!`);
-    }
+    axios.get(url).then(displayWeather);
   }
 
   function handleSubmit(event) {
