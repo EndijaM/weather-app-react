@@ -1,5 +1,6 @@
 import React from "react";
 import "./WeatherData.css";
+import Temperature from "./Temperature";
 
 export default function WeatherData(props) {
   return (
@@ -22,7 +23,10 @@ export default function WeatherData(props) {
             </div>
           </div>
         </div>
-        <div className="col-sm-4"> Temperature </div>
+        <div className="col-sm-4">
+          {" "}
+          <Temperature value={props.data.temperature} />
+        </div>
         <div className="col-sm-4">
           {" "}
           <ul>
