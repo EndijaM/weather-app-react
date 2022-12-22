@@ -42,36 +42,36 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  let searchForm = (
+    <form action="" onSubmit={handleSubmit}>
+      <div className="row">
+        <div className="col-sm-6 m-1">
+          <input
+            type="search"
+            placeholder="Type a city"
+            autocomplete="off"
+            className="form-control"
+          />
+        </div>
+        <div className="col-sm-3 m-1">
+          <input
+            type="submit"
+            value="Search"
+            className="btn btn-secondary w-100"
+            onChange={updateCity}
+          />
+        </div>
+        <div className="col-sm-2 m-1">
+          <input type="button" value="📌" className="btn btn-secondary w-100" />
+        </div>
+      </div>
+    </form>
+  );
+
   return (
     <div>
       <div className="container">
-        <form action="" onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-sm-6 m-1">
-              <input
-                type="search"
-                placeholder="Type a city"
-                autocomplete="off"
-                className="form-control"
-              />
-            </div>
-            <div className="col-sm-3 m-1">
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-secondary w-100"
-                onChange={updateCity}
-              />
-            </div>
-            <div className="col-sm-2 m-1">
-              <input
-                type="button"
-                value="📌"
-                className="btn btn-secondary w-100"
-              />
-            </div>
-          </div>
-        </form>
+        <div className="searchForm">{searchForm}</div>
       </div>
       <Footer />
     </div>
