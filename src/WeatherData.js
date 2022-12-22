@@ -1,4 +1,5 @@
 import React from "react";
+import "./WeatherData.css";
 
 export default function WeatherData(props) {
   return (
@@ -9,17 +10,38 @@ export default function WeatherData(props) {
 
       <div className="row">
         <div className="col-sm-4">
-          {" "}
-          <img src={props.data.icon} alt={props.data.description} />{" "}
-          <div>{props.data.description}</div>
+          <div className="description">
+            {" "}
+            <img src={props.data.icon} alt={props.data.description} />{" "}
+            <div>
+              {" "}
+              <li>
+                {" "}
+                <strong>{props.data.description}</strong>{" "}
+              </li>
+            </div>
+          </div>
         </div>
         <div className="col-sm-4"> Temperature </div>
         <div className="col-sm-4">
           {" "}
           <ul>
-            <li>Humidity: {props.data.humidity} %</li>
-            <li>Wind: {Math.round(props.data.wind)} mph</li>
-            <li>Pressure: {props.data.pressure} hPa </li>
+            <br />
+
+            <li>
+              {" "}
+              <strong> Humidity: </strong>
+              {props.data.humidity} %
+            </li>
+            <li>
+              {" "}
+              <strong> Wind:</strong> {Math.round(props.data.wind)} mph
+            </li>
+            <li>
+              {" "}
+              <strong> Pressure: </strong>
+              {props.data.pressure} hPa{" "}
+            </li>
           </ul>
         </div>
       </div>
