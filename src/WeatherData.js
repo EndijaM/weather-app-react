@@ -25,7 +25,7 @@ export default function WeatherData(props) {
         </div>
         <div className="col-sm-4">
           {" "}
-          <Temperature value={props.data.temperature} />
+          <Temperature value={Math.round(props.data.temperature)} />
         </div>
         <div className="col-sm-4">
           {" "}

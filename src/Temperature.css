@@ -1,0 +1,13 @@
+.Temperature h2 {
+  font-size: 68px;
+  font-weight: 500;
+  color: #606568;
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+.Unit {
+  font-size: 16px;
+  position: relative;
+  top: -22px;
+}
