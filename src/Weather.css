@@ -14,3 +14,7 @@ body {
   max-width: 750px;
   min-width: 400px;
 }
+.btn-secondary {
+  background-color: #0083ad;
+  border: #0083ad;
+}
