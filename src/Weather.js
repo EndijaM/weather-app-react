@@ -14,6 +14,7 @@ export default function Weather(props) {
 
   function displayWeather(response) {
     setWeather({
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       temperature: response.data.main.temp,
       pressure: response.data.main.pressure,

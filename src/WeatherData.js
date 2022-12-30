@@ -1,6 +1,7 @@
 import React from "react";
 import "./WeatherData.css";
 import Temperature from "./Temperature";
+import FormattedDate from "./FormattedDate";
 
 export default function WeatherData(props) {
   return (
@@ -8,6 +9,7 @@ export default function WeatherData(props) {
       <h1>
         {props.data.city} <small>({props.data.country})</small>
       </h1>
+      <FormattedDate date={props.data.date} />
 
       <div className="row">
         <div className="col-sm-4">
