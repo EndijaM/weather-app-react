@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { RotatingLines } from "react-loader-spinner";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
@@ -80,6 +81,17 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    return citySearch();
+    citySearch();
+    return (
+      <div className="container">
+        <RotatingLines
+          strokeColor="#0083ad"
+          strokeWidth="5"
+          animationDuration="0.75"
+          width="250"
+          visible={true}
+        />
+      </div>
+    );
   }
 }
