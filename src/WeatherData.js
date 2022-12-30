@@ -41,7 +41,7 @@ export default function WeatherData(props) {
             </li>
             <li>
               {" "}
-              <strong> Wind:</strong> {Math.round(props.data.wind)} mph
+              <strong> Wind:</strong> {Math.round(props.data.wind)} km/h
             </li>
             <li>
               {" "}

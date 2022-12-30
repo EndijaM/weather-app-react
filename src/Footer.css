@@ -1,5 +1,6 @@
 .Footer {
   margin: 0 auto;
+  margin-bottom: 100px;
 
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 7px 5px 11px 0px rgba(148, 154, 156, 0.7);
@@ -16,7 +17,14 @@
   text-align: center;
   line-height: 1.7;
 }
-.Footer a {
+.Footer a,
+.Footer-picture-credit a {
   color: black;
   opacity: 0.9;
+}
+.Footer-picture-credit small {
+  background-color: none;
+  font-size: 11px;
+  color: grey;
+  opacity: 0.3;
 }
