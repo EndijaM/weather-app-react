@@ -23,10 +23,7 @@ export default function Temperature(props) {
         <h2>
           {props.value}°{" "}
           <span className="Unit">
-            <a href="/" onClick={showCelsius} className="deactivated">
-              C{" "}
-            </a>
-            |
+            C |
             <a href="/" onClick={showFahrenheit}>
               {" "}
               F{" "}
@@ -44,11 +41,7 @@ export default function Temperature(props) {
             <a href="/" onClick={showCelsius}>
               C{" "}
             </a>
-            |
-            <a href="/" onClick={showFahrenheit} className="deactivated">
-              {" "}
-              F{" "}
-            </a>
+            | F{" "}
           </span>
         </h2>
       </div>

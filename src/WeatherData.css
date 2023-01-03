@@ -20,7 +20,9 @@
   text-transform: capitalize;
   margin-top: 24px;
 }
-
+.WeatherData .description canvas {
+  margin-left: -20px;
+}
 .FormattedDate li {
   margin: 0;
 }

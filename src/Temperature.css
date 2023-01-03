@@ -19,9 +19,3 @@
 .Temperature a:hover {
   color: rgb(184, 3, 3);
 }
-
-.Temperature .deactivated {
-  color: #606568;
-  cursor: pointer;
-  text-decoration: none;
-}
