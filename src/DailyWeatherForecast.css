@@ -1,0 +1,12 @@
+.DailyWeatherForecast {
+  text-align: center;
+  transition: all 150ms ease-in-out;
+}
+.DailyWeatherForecast:hover {
+  background-color: #d5f4ff;
+  border-radius: 10px;
+}
+.DailyWeatherForecast-temperature-min {
+  opacity: 0.65;
+  margin-left: 5px;
+}

@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
 import Footer from "./Footer";
 import WeatherData from "./WeatherData";
+import DailyWeatherForecast from "./DailyWeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.city);
@@ -77,6 +78,7 @@ export default function Weather(props) {
         <div className="container">
           <div className="searchForm">{searchForm}</div>
           <WeatherData data={weather} />
+          <DailyWeatherForecast />
         </div>
         <Footer />
       </div>
@@ -89,9 +91,10 @@ export default function Weather(props) {
           strokeColor="#0083ad"
           strokeWidth="5"
           animationDuration="0.75"
-          width="250"
+          width="150"
           visible={true}
         />
+        <Footer />
       </div>
     );
   }
