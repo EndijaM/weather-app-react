@@ -18,7 +18,9 @@
 .WeatherData .description {
   text-align: center;
   text-transform: capitalize;
+  margin-top: 24px;
 }
+
 .FormattedDate li {
   margin: 0;
 }
