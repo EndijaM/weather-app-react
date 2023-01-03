@@ -10,11 +10,11 @@ import DailyWeatherForecast from "./DailyWeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.city);
-  const [weather, setWeather] = useState("");
-  const [update, setUpdate] = useState(false);
+  const [weather, setWeather] = useState({ ready: false });
 
   function displayWeather(response) {
     setWeather({
+      ready: true,
       coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
@@ -26,11 +26,10 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
     });
-    setUpdate(true);
   }
 
   function citySearch() {
-    let apiKey = "99b8f9330a1bfba3a85e523fd3c2e528";
+    let apiKey = "88724523008dc9e1be18f6eb6a959b67";
     let units = "metric";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
@@ -73,7 +72,7 @@ export default function Weather(props) {
     </form>
   );
 
-  if (update) {
+  if (weather.ready) {
     return (
       <div>
         <div className="container">
