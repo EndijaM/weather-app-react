@@ -58,9 +58,6 @@ export default function Weather(props) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
-  //useEffect(() => {
-  //citySearch();
-  //}, []);
 
   let searchForm = (
     <form action="" onSubmit={handleSubmit}>

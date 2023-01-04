@@ -15,3 +15,8 @@
 .OneDayForecast .DailyWeatherForecast-day-accurate {
   margin-bottom: 10px;
 }
+.day-weather-description p {
+  font-size: 10px;
+  text-transform: capitalize;
+  opacity: 0.8;
+}
