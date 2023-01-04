@@ -1,6 +1,7 @@
 .WeatherData {
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 10px;
 }
 .WeatherData h1 {
   opacity: 0.8;
@@ -19,6 +20,7 @@
   text-align: center;
   text-transform: capitalize;
   margin-top: 24px;
+  padding: 10px;
 }
 .WeatherData .description canvas {
   margin-left: -20px;

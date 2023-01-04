@@ -1,8 +1,9 @@
-.DailyWeatherForecast {
+.DailyWeatherForecast .col {
   text-align: center;
+  padding: 15px 0;
   transition: all 150ms ease-in-out;
 }
-.DailyWeatherForecast:hover {
+.DailyWeatherForecast .col:hover {
   background-color: #d5f4ff;
   border-radius: 10px;
 }
