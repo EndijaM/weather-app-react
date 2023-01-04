@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { RotatingLines } from "react-loader-spinner";
 
@@ -58,9 +58,9 @@ export default function Weather(props) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
-  useEffect(() => {
-    citySearch();
-  }, []);
+  //useEffect(() => {
+  //citySearch();
+  //}, []);
 
   let searchForm = (
     <form action="" onSubmit={handleSubmit}>
