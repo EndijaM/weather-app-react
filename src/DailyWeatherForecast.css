@@ -10,3 +10,7 @@
   opacity: 0.65;
   margin-left: 5px;
 }
+
+.OneDayForecast .DailyWeatherForecast-day-accurate {
+  margin-bottom: 10px;
+}
