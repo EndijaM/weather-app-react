@@ -30,9 +30,9 @@ export default function WeatherData(props) {
           {" "}
           <Temperature value={Math.round(props.data.temperature)} />
         </div>
-        <div className="col-sm-4">
+        <div className="col-sm-4 conditions">
           {" "}
-          <ul>
+          <ul className="">
             <br />
 
             <li>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { RotatingLines } from "react-loader-spinner";
 
@@ -45,6 +45,23 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function searchLocation(location) {
+    let lat = location.coords.latitude;
+    let lon = location.coords.longitude;
+    const apiKey = "88724523008dc9e1be18f6eb6a959b67";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+    axios.get(apiUrl).then(displayWeather);
+  }
+
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+  useEffect(() => {
+    citySearch();
+  }, []);
+
   let searchForm = (
     <form action="" onSubmit={handleSubmit}>
       <div className="row">
@@ -65,7 +82,12 @@ export default function Weather(props) {
           />
         </div>
         <div className="col-sm-2 m-1">
-          <input type="button" value="📌" className="btn btn-secondary w-100" />
+          <input
+            type="button"
+            value="📌"
+            onClick={getCurrentLocation}
+            className="btn btn-secondary w-100"
+          />
         </div>
       </div>
     </form>
